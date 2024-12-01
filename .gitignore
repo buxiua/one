@@ -8,3 +8,4 @@ dist/
 .deploy*/
 _multiconfig.yml
 *-lock.*
+_config.*.yml

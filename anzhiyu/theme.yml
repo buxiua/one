@@ -1,0 +1,249 @@
+# mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
+# 注意： 仅网站首页变灰，其他页面正常显示
+mourn:
+  enable: false
+  days: [4-5, 5-12, 7-7, 9-18, 12-13]
+
+# Code Blocks (代码相关样式)
+# --------------------------------------
+
+highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_copy: true # copy button
+highlight_lang: true # show the code language
+highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
+highlight_height_limit: 330 # unit: px
+code_word_wrap: false
+
+
+
+# Math (数学)
+# see https://docs.anheyu.com/advanced/#数学公式
+# --------------------------------------
+# About the per_page
+# if you set it to true, it will load mathjax/katex script in each page (true 表示每一页都加载js)
+# if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' in page's front-matter)
+# (false 需要时加载，须在使用的 Markdown Front-matter 加上 mathjax: true)
+
+# MathJax
+mathjax:
+  enable: false
+  per_page: false
+
+# KaTeX
+katex:
+  enable: false
+  per_page: false
+  hide_scrollbar: true
+
+
+
+
+# If the banner of page not setting, it will show the top_img
+default_top_img: https://pic2.zhimg.com/v2-600a2b8a0faf7a6a24f27c960f66d897_b.webp?consumer=ZHI_MENG
+
+cover:
+  # display the cover or not (是否显示文章封面)
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  # the position of cover in home page (封面显示的位置)
+  # left/right/both
+  position: both
+  # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
+  default_cover:
+     - https://pic2.zhimg.com/v2-600a2b8a0faf7a6a24f27c960f66d897_b.webp?consumer=ZHI_MENG
+
+# Replace Broken Images (替换无法显示的图片)
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+# A simple 404 page
+error_404:
+  enable: true
+  subtitle: "请尝试站内搜索寻找文章"
+  background: https://bu.dusays.com/2023/05/08/645907596997d.gif
+
+post_meta:
+  page: # Home Page
+    date_type: created # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_format: simple # date/relative/simple 显示日期还是相对日期 或者 简单日期
+    categories: true # true or false 主页是否显示分类
+    tags: true # true or false 主页是否显示标籤
+    label: false # true or false 显示描述性文字
+  post:
+    date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
+    date_format: date # date/relative 显示日期还是相对日期
+    categories: true # true or false 文章页是否显示分类
+    tags: true # true or false 文章页是否显示标籤
+    label: true # true or false 显示描述性文字
+    unread: false # true or false 文章未读功能
+
+# 主色调相关配置
+mainTone:
+  enable: false # true or false 文章是否启用获取图片主色调
+  mode: api # cdn/api/both cdn模式为图片url+imageAve参数获取主色调，api模式为请求API获取主色调，both模式会先请求cdn参数，无法获取的情况下将请求API获取，可以在文章内配置main_color: '#3e5658'，使用十六进制颜色，则不会请求both/cdn/api获取主色调，而是直接使用配置的颜色
+  # 项目地址：https://github.com/anzhiyu-c/img2color-go
+  api: https://img2color-go.vercel.app/api?img= # mode为api时可填写
+  cover_change: true # 整篇文章跟随cover修改主色调
+
+
+# Beautify/Effect (美化/效果)
+# --------------------------------------
+
+# Theme color for customize
+# Notice: color value must in double quotes like "#000" or may cause error!
+
+theme_color:
+  enable: true
+  main: "#425AEF"
+  dark_main: "#f2b94b"
+  paginator: "#425AEF"
+  #   button_hover: "#FF7242"
+  text_selection: "#2128bd"
+  link_color: "var(--anzhiyu-fontcolor)"
+  meta_color: "var(--anzhiyu-fontcolor)"
+  hr_color: "#4259ef23"
+  code_foreground: "#fff"
+  code_background: "var(--anzhiyu-code-stress)"
+  toc_color: "#425AEF"
+  #   blockquote_padding_color: "#425AEF"
+  #   blockquote_background_color: "#425AEF"
+  scrollbar_color: "var(--anzhiyu-scrollbar)"
+  meta_theme_color_light: "#f7f9fe"
+  meta_theme_color_dark: "#18171d"
+
+# 移动端侧栏
+sidebar:
+  site_data:
+    archive: true
+    tag: true
+    category: true
+  menus_items: true
+  tags_cloud: true
+  display_mode: true
+  nav_menu_project: true
+
+# 文章h2添加分隔线
+h2Divider: false
+
+# 表格隔行变色
+table_interlaced_discoloration: false
+
+# 首页双栏显示
+article_double_row: false
+
+
+
+# The user interface setting of category and tag page (category和tag页的UI设置)
+# index - same as Homepage UI (index 值代表 UI将与首页的UI一样)
+# default - same as archives UI 默认跟archives页面UI一样
+category_ui: # 留空或 index
+tag_ui: # 留空或 index
+
+# Footer Background
+footer_bg: false
+
+# the position of bottom right button/default unit: px (右下角按钮距离底部的距离/默认单位为px)
+rightside-bottom: 100px
+
+# Background effects (背景特效)
+# --------------------------------------
+
+# canvas_ribbon (静止彩带背景)
+# See: https://github.com/hustcc/ribbon.js
+canvas_ribbon:
+  enable: false
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+  click_to_change: false
+  mobile: false
+
+# Fluttering Ribbon (动态彩带)
+canvas_fluttering_ribbon:
+  enable: false
+  mobile: false
+
+# canvas_nest
+# https://github.com/hustcc/canvas-nest.js
+canvas_nest:
+  enable: false
+  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  opacity: 0.7 # the opacity of line (0~1), default: 0.5.
+  zIndex: -1 # z-index property of the background, default: -1.
+  count: 99 # the number of lines, default: 99.
+  mobile: false
+
+# Typewriter Effect (打字效果)
+# https://github.com/disjukr/activate-power-mode
+activate_power_mode:
+  enable: false
+  colorful: true # open particle animation (冒光特效)
+  shake: true #  open shake (抖动特效)
+  mobile: false
+
+# Mouse click effects: fireworks (鼠标点击效果: 烟火特效)
+fireworks:
+  enable: false
+  zIndex: 9999 # -1 or 9999
+  mobile: false
+
+# Mouse click effects: Heart symbol (鼠标点击效果: 爱心)
+click_heart:
+  enable: false
+  mobile: false
+
+# Mouse click effects: words (鼠标点击效果: 文字)
+ClickShowText:
+  enable: true
+  text:
+    - C
+    - C++
+    - Java
+    - HTML
+    - CSS3
+    - JavaScript
+    - Vue
+    - React
+    - Vite
+    - Rust
+    - Webpack
+    - Linux
+    - Ubuntu
+    - Kali
+    - Kubuntu
+  fontSize: 15px
+  random: true
+  mobile: false
+
+# Default display mode (网站默认的显示模式)
+# light (default) / dark
+display_mode: light
+
+# Beautify (美化页面显示)
+beautify:
+  enable: true
+  field: post # site/post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: "#F47466"
+
+# Global font settings
+# Don't modify the following settings unless you know how they work (非必要不要修改)
+font:
+  global-font-size: 16px
+  code-font-size:
+  font-family:
+  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+
+# Font settings for the site title and site subtitle
+# 左上角网站名字 主页居中网站名字
+blog_title_font:
+  font_link:
+  font-family: PingFang SC, 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif
+
+# The setting of divider icon (水平分隔线图标设置)
+hr_icon:
+  enable: true
+  icon: \f0c4 # the unicode value of Font Awesome icon, such as '\f0c4'
+  icon-top:

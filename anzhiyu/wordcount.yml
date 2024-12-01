@@ -1,0 +1,10 @@
+
+# wordcount (字数统计)
+# see https://blog.anheyu.com/posts/c27d.html#字数统计
+# --------------------------------------
+
+wordcount:
+  enable: false # 有问题，没法统计
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true

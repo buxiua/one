@@ -1,0 +1,30 @@
+# search (搜索)
+# see https://blog.anheyu.com/posts/c27d.html#搜索系统
+# --------------------------------------
+
+# Algolia search
+algolia_search:
+  enable: false
+  hits:
+    per_page: 6
+  tags:
+    # - 前端
+    # - Hexo
+
+# Docsearch
+# Apply and Option Docs: see https://docsearch.algolia.com/
+# Crawler Admin Console: see https://crawler.algolia.com/
+# Settings: https://www.algolia.com/
+docsearch:
+  enable: false
+  appId: # see email
+  apiKey: # see email
+  indexName: # see email
+  option:
+
+# Local search
+local_search:
+  enable: false
+  preload: true
+  CDN:
+
